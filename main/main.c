@@ -63,5 +63,7 @@ void app_main(void)
     ESP_ERROR_CHECK( esp_wifi_start() );
     ESP_ERROR_CHECK( esp_wifi_connect() );
 
+    initialise_weight_sensor();
+
 }
 
