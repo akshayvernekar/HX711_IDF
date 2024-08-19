@@ -20,14 +20,14 @@ void HX711_init(gpio_num_t dout, gpio_num_t pd_sck, HX711_GAIN gain )
 	GPIO_DOUT = dout;
 
 	gpio_config_t io_conf;
-    io_conf.intr_type = GPIO_PIN_INTR_DISABLE;
+    io_conf.intr_type = GPIO_INTR_DISABLE;
     io_conf.mode = GPIO_MODE_OUTPUT;
     io_conf.pin_bit_mask = (1ULL<<GPIO_PD_SCK);
     io_conf.pull_down_en = 0;
     io_conf.pull_up_en = 0;
     gpio_config(&io_conf);
 
-    io_conf.intr_type = GPIO_PIN_INTR_DISABLE;
+    io_conf.intr_type = GPIO_INTR_DISABLE;
     io_conf.pin_bit_mask = (1ULL<<GPIO_DOUT);
     io_conf.mode = GPIO_MODE_INPUT;
     io_conf.pull_up_en = 0;
